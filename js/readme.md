@@ -10,6 +10,8 @@ Scrivere un programma che chieda all'utente:
 
 ### Svolgimento:
 
+Al click del bottone
+
 1. chiedere e salvare nome passeggero
 
 2. chiedere e salvare i km da percorrere
