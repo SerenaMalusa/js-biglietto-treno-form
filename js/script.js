@@ -36,6 +36,10 @@ sendBtn.addEventListener('click', function() {
     const kmCount = parseFloat(inputKM.value);
     //console.log('km:', kmCount, 'tipo dato:', typeof kmCount);
 
+    // 3. chiedere e salvare fascia età del passeggero
+    const ageRange = inputAge.value;
+    //console.log(ageRange);
+
     //se non è stato inserito alcun nome
     if (passengerName == '') {
 
@@ -53,10 +57,6 @@ sendBtn.addEventListener('click', function() {
         // 4. definire il prezzo del biglietto in base ai km (0.21 € al km)
         const fullTicket = kmCount * kmValue; 
         //console.log(kmCount, 'x', kmValue, '=', fullTicket);
-
-        // 3. chiedere e salvare fascia età del passeggero
-        const ageRange = inputAge.value;
-        //console.log(ageRange);
 
         // 6. se il passeggero è minorenne 
         if (ageRange === 'minorenne') {
