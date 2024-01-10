@@ -10,13 +10,13 @@ Scrivere un programma che chieda all'utente:
 
 ### Svolgimento:
 
-Al click del bottone
+Al click del bottone:
 
 1. chiedere e salvare nome passeggero
 
 2. chiedere e salvare i km da percorrere
 
-3. chiedere e salvare età del passeggero
+3. chiedere e salvare fascia età del passeggero
 
 4. definire il prezzo del biglietto in base ai km (0.21 € al km)
 
