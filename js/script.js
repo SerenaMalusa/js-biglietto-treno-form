@@ -22,7 +22,7 @@ let ticketNum = '';
 // 5. definire una percentuale di sconto inizialmente uguale a 0 
 // e un'offerta con nome "biglietto standard"
 let discountPercentage = 0;
-let discountName = 'Biglietto Standard';
+let discountName = '';
 
 // Al click del bottone:
 sendBtn.addEventListener('click', function() {
@@ -62,6 +62,13 @@ sendBtn.addEventListener('click', function() {
         discountPercentage = 40;
         discountName = 'Promo Over65';
 
+    // altrimenti resetta % sconto e nome offerta o rimangono 
+    // uguali a quelle settate in precedenza fino a che non si ricarica la pag
+    } else {
+
+        discountPercentage = 0;
+        discountName = 'Biglietto Standard';
+
     }
 
     console.log('% sconto:', discountPercentage, 'offerta:', discountName);
@@ -82,5 +89,8 @@ sendBtn.addEventListener('click', function() {
     // 11. un codice biglietto con numero random
     ticketNum = ticketNum + trainPos + randomNum;
     console.log('ticket number:', ticketNum, 't pos:', trainPos, 'random n:', randomNum);
+
+    //12. stampare tutti i dati in pagina
+    
 
 });
