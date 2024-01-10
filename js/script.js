@@ -23,7 +23,7 @@ let discountName = 'Biglietto Standard';
 
 // setta l'età base a maggiorenne
 inputAge.value = 'maggiorenne';
-console.log(inputAge.value);
+//console.log(inputAge.value);
 
 // Al click del send button:
 sendBtn.addEventListener('click', function() {
