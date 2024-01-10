@@ -4,6 +4,7 @@
 const inputName = document.getElementById('input-name');
 const inputKM = document.getElementById('input-km');
 const inputAge = document.getElementById('input-age');
+const printTicket = document.getElementById('output-ticket');
 const outputName = document.getElementById('output-name');
 const outputDiscount = document.getElementById('output-discount');
 const outputTrainPos = document.getElementById('output-trainposition');
@@ -98,5 +99,8 @@ sendBtn.addEventListener('click', function() {
     outputTrainPos.innerText = trainPos;
     outputTicketNum.innerText = ticketNum;
     outputPrice.innerText = discountedTicket.toFixed(2) + '€';
+
+    //BONUS: Visualizzare il biglietto solo dopo il click sul bottone
+    printTicket.className = 'd-block';
 
 });
