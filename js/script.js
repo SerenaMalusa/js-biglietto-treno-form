@@ -19,7 +19,11 @@ const kmValue = 0.21;
 // 5. definire una percentuale di sconto inizialmente uguale a 0 
 // e un'offerta con nome "biglietto standard"
 let discountPercentage = 0;
-let discountName = '';
+let discountName = 'Biglietto Standard';
+
+// setta l'età base a maggiorenne
+inputAge.value = 'maggiorenne';
+console.log(inputAge.value);
 
 // Al click del send button:
 sendBtn.addEventListener('click', function() {
@@ -121,5 +125,10 @@ resetBtn.addEventListener('click', function () {
 
     // cancella eventuali biglietti già stampati
     printTicket.className = 'd-none';
+
+    // cancella i campi
+    inputName.value = '';
+    inputKM.value = '';
+    inputAge.value = 'maggiorenne';
 
 });
