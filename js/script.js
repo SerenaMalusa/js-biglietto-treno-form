@@ -87,10 +87,16 @@ sendBtn.addEventListener('click', function() {
     const randomNum = Math.floor( Math.random() * 1000 );
     // sommare numero carrozza al numero random per ottenere
     // 11. un codice biglietto con numero random
-    ticketNum = ticketNum + trainPos + randomNum;
+    ticketNum = trainPos + '-' + randomNum;
     console.log('ticket number:', ticketNum, 't pos:', trainPos, 'random n:', randomNum);
 
     //12. stampare tutti i dati in pagina
-    
+    outputName.innerText = passengerName;
+    outputName.style.textTransform = "capitalize";
+
+    outputDiscount.innerText = discountName;
+    outputTrainPos.innerText = trainPos;
+    outputTicketNum.innerText = ticketNum;
+    outputPrice.innerText = discountedTicket.toFixed(2) + '€';
 
 });
