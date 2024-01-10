@@ -42,7 +42,7 @@ sendBtn.addEventListener('click', function() {
         // chiedere di inserire nome e cognome
         alert('ATTENZIONE: inserire nome e cognome passeggero');
 
-    // altrimenti se il valore dei km non è un numero
+    // altrimenti se il valore dei km non è un numero o è 0
     } else if ( isNaN(kmCount) || kmCount == 0) {
 
         // chiedere di inserire i km in numero
