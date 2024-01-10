@@ -30,11 +30,11 @@ sendBtn.addEventListener('click', function() {
 
     // 1. chiedere e salvare nome passeggero
     const passengerName = inputName.value.trim();
-    console.log('nome: ',passengerName);
+    //console.log('nome: ',passengerName);
 
     // 2. chiedere e salvare i km da percorrere
     const kmCount = parseFloat(inputKM.value);
-    console.log('km:', kmCount, 'tipo dato:', typeof kmCount);
+    //console.log('km:', kmCount, 'tipo dato:', typeof kmCount);
 
     //se non è stato inserito alcun nome
     if (passengerName == '') {
@@ -52,11 +52,11 @@ sendBtn.addEventListener('click', function() {
 
         // 4. definire il prezzo del biglietto in base ai km (0.21 € al km)
         const fullTicket = kmCount * kmValue; 
-        console.log(kmCount, 'x', kmValue, '=', fullTicket);
+        //console.log(kmCount, 'x', kmValue, '=', fullTicket);
 
         // 3. chiedere e salvare fascia età del passeggero
         const ageRange = inputAge.value;
-        console.log(ageRange);
+        //console.log(ageRange);
 
         // 6. se il passeggero è minorenne 
         if (ageRange === 'minorenne') {
@@ -81,7 +81,7 @@ sendBtn.addEventListener('click', function() {
 
         }
 
-        console.log('% sconto:', discountPercentage, 'offerta:', discountName);
+        //console.log('% sconto:', discountPercentage, 'offerta:', discountName);
         
         // 8. calcolare e salvare il valore da scontare
         const discountValue = (fullTicket * discountPercentage) / 100;
@@ -91,14 +91,14 @@ sendBtn.addEventListener('click', function() {
 
         // 10. scegliere una carrozza con numero random
         trainPos = Math.floor( (Math.random() * 10) + 1 );
-        console.log('carrozza n:', trainPos);
+        //console.log('carrozza n:', trainPos);
         
         // generare numero random 
         const randomNum = Math.floor( Math.random() * 1000 );
         // sommare numero carrozza al numero random per ottenere
         // 11. un codice biglietto con numero random
         ticketNum = trainPos + '-' + randomNum;
-        console.log('ticket number:', ticketNum, 't pos:', trainPos, 'random n:', randomNum);
+        //console.log('ticket number:', ticketNum, 't pos:', trainPos, 'random n:', randomNum);
 
         //12. stampare tutti i dati in pagina
         outputName.innerText = passengerName;
