@@ -126,7 +126,7 @@ resetBtn.addEventListener('click', function () {
     // cancella eventuali biglietti già stampati
     printTicket.className = 'd-none';
 
-    // cancella i campi
+    // resetta i campi
     inputName.value = '';
     inputKM.value = '';
     inputAge.value = 'maggiorenne';
