@@ -12,6 +12,7 @@ const outputTicketNum = document.getElementById('output-ticket-num');
 const outputPrice = document.getElementById('output-price');
 //button
 const sendBtn = document.querySelector('#send-button');
+const resetBtn = document.querySelector('#reset-button');
 
 /* OTHER VARIABLES */
 const kmValue = 0.21;
@@ -20,7 +21,7 @@ const kmValue = 0.21;
 let discountPercentage = 0;
 let discountName = '';
 
-// Al click del bottone:
+// Al click del send button:
 sendBtn.addEventListener('click', function() {
 
     // 1. chiedere e salvare nome passeggero
@@ -101,7 +102,7 @@ sendBtn.addEventListener('click', function() {
 
         outputDiscount.innerText = discountName;
         outputDiscount.style.textTransform = "capitalize";
-
+        
         outputTrainPos.innerText = trainPos;
         outputTicketNum.innerText = ticketNum;
         outputPrice.innerText = discountedTicket.toFixed(2) + '€';
@@ -110,5 +111,15 @@ sendBtn.addEventListener('click', function() {
         printTicket.className = 'd-block';
 
     }
+
+});
+
+// Al click del reset button
+resetBtn.addEventListener('click', function () {
+
+    //console.log('reset clicked');
+
+    // cancella eventuali biglietti già stampati
+    printTicket.className = 'd-none';
 
 });
