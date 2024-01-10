@@ -14,12 +14,7 @@ const outputPrice = document.getElementById('output-price');
 const sendBtn = document.querySelector('#send-button');
 
 /* OTHER VARIABLES */
-// cost
 const kmValue = 0.21;
-
-// let
-let trainPos = 0;
-let ticketNum = '';
 // 5. definire una percentuale di sconto inizialmente uguale a 0 
 // e un'offerta con nome "biglietto standard"
 let discountPercentage = 0;
@@ -90,14 +85,14 @@ sendBtn.addEventListener('click', function() {
         const discountedTicket = fullTicket - discountValue;
 
         // 10. scegliere una carrozza con numero random
-        trainPos = Math.floor( (Math.random() * 10) + 1 );
+        const trainPos = Math.floor( (Math.random() * 10) + 1 );
         //console.log('carrozza n:', trainPos);
         
         // generare numero random 
         const randomNum = Math.floor( Math.random() * 1000 );
         // sommare numero carrozza al numero random per ottenere
         // 11. un codice biglietto con numero random
-        ticketNum = trainPos + '-' + randomNum;
+        const ticketNum = trainPos + '-' + randomNum;
         //console.log('ticket number:', ticketNum, 't pos:', trainPos, 'random n:', randomNum);
 
         //12. stampare tutti i dati in pagina
@@ -105,6 +100,8 @@ sendBtn.addEventListener('click', function() {
         outputName.style.textTransform = "capitalize";
 
         outputDiscount.innerText = discountName;
+        outputDiscount.style.textTransform = "capitalize";
+
         outputTrainPos.innerText = trainPos;
         outputTicketNum.innerText = ticketNum;
         outputPrice.innerText = discountedTicket.toFixed(2) + '€';
